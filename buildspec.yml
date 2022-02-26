@@ -10,12 +10,13 @@ phases:
       - npm -v
   build:
     commands:
+      - git config --global user.email "eng.omar.higgy@gmail.com"
+      - git config --global user.name "eng.omar.higgy"
+      - git checkout main
       - npm install
       - npm run build
   post_build:
     commands:
-      - git config --global user.email "eng.omar.higgy@gmail.com"
-      - git config --global user.name "eng.omar.higgy"
       - git add .
       - git commit -m "new"
       - git push
