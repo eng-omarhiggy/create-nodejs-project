@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
+    commands:
+      - node -v
+      - npm -v
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+      - git config --global user.email "eng.omar.higgy@gmail.com"
+      - git config --global user.name "eng.omar.higgy"
+      - git add .
+      - git commit -m "new"
+      - git push
