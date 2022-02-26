@@ -15,7 +15,7 @@ phases:
       - npm run build
   post_build:
     commands:
-
+      - git checkout main
       - git add .
       - git commit -m "new"
-      - git push
+      - git push origin main
