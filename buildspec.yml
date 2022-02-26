@@ -10,6 +10,7 @@ phases:
       - npm -v
   build:
     commands:
+      - npm start
       - npm run build
   post_build:
     commands:
